@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./scrpit.js" defer></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <header class="top">
         <div class="nav">
             <a href="">Inicio</a>
-            <a href="">Dicas</a>
+            <a href="#dicas">Dicas</a>
             <a href="#Teste">Teste de hábitos</a>
         </div>
     </header>
@@ -33,7 +34,7 @@
 
     </section>
 
-    <section class="cards" id="cards">
+    <section class="cards" id="section-cards">
 
     </section>
 
@@ -41,20 +42,24 @@
 
     <section class="container" id="Teste">
 
-            <h2>Teste</h2>
+        <h2>Teste</h2>
 
-        <form class="form-group">
+        <form class="form-group" id="formulario">
             <label for="">Você dorme pelo menos 7 horas por noite?</label>
-            <input type="text">
+            <input type="radio" id="input1" name="dormir" value="sim"> Sim
+            <input type="radio" id="input1" name="dormir" value="não"> Não
             <label for="">Você faz pausas durante os estudos?
             </label>
-            <input type="text">
+            <input type="radio" id="input2" name="pausas" value="sim"> Sim
+            <input type="radio" id="input2" name="pausas" value="não"> Não
             <label for="">Você pratica alguma atividade física?</label>
-            <input type="text">
+            <input type="radio" id="input3" name="atividade" value="sim"> Sim
+            <input type="radio" id="input3" name="atividade" value="não"> Não
             <label for="">Você evita usar celular antes de dormir?
             </label>
-            <input type="text">
-            <button>Enviar</button>
+            <input type="radio" id="input4" name="celular" value="sim"> Sim
+            <input type="radio" id="input4" name="celular" value="não"> Não
+            <button onclick="formulario()">Enviar</button>
         </form>
 
         <div class="result-box">
@@ -64,12 +69,26 @@
     </section>
 
 
-    <section class="dicas">
+    <section class="dicas" id="dicas">
         <div class="gerador">
+            <h2>Dicas:</h2>
             <p id="gerador"></p>
+            <button onclick="dicas_gerador()">Gerar dica</button>
         </div>
-        <button>Gerar dica</button>
+
     </section>
+
+    <section class="number">
+        <h2>Converter número romano</h2>
+        <form class="form-group" id="formulario2">
+            <label for="">Digite um número romano:</label>
+            <input type="text" id="input5">
+            <label for="">Resultado:</label>
+            <input type="text" id="resultado2" readonly>
+            <button onclick="converter()">Converter</button>
+        </form>
+    </section>
+
 
 
 
